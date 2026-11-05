@@ -8,6 +8,8 @@
 >
 > 이 문서는 위 원본의 Drive 미러를 **읽기 전용으로** 조사해 정리했습니다. 원본에 "REA"라는 이름의 폴더는 없습니다. 위 위치에 흩어져 있는 분석 체계를 이 문서에서 **REA**로 묶어 부릅니다.
 >
+> 📌 이름이 같은 오픈소스 **REA: Reverse Engineer Anything**(github.com/morluto/rea, 에이전트용 리버싱 MCP 서버)은 [hot-opensource-2026-11.md §3](hot-opensource-2026-11.md#3-rea-reverse-engineer-anything-집중-분석)에 정리했습니다. 이 문서의 정적 분석 체계에 에이전트 보조 도구로 붙일 수 있습니다(정적 모드만, VM 안에서).
+>
 > 공개 저장소이므로 다음은 싣지 않았습니다: 악성 샘플·복원 페이로드, 개인 계정·금융·토큰 정보, 사용자 경로.
 
 ---

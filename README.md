@@ -9,6 +9,7 @@
 |---|---|
 | [docs/ai-opensource-inventory.md](docs/ai-opensource-inventory.md) | AI 오픈소스·도구 인벤토리(Hermes, Paseo, Ollama, MCP, Codex 등), 구성값, 멀티 에이전트 역할 분담, 활용 시나리오 |
 | [docs/rea-reverse-engineering-analysis.md](docs/rea-reverse-engineering-analysis.md) | REA(Reverse Engineering Analysis) — 의심 파일 정적 리버싱 환경 구성, 단계별 절차, 사례 연구, 재사용 플레이북 |
+| [rea/](rea/) | REA 실행 도구 — `requirements-rea.txt`(툴체인 버전 고정), `new_case.py`(케이스 폴더 생성), `hash_manifest.py`(SHA-256 전후 검증) |
 
 ## Lab 공통 원칙
 

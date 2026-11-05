@@ -1,0 +1,25 @@
+# REA (Reverse Engineering Analysis) 정적 분석 툴체인 — 버전 고정
+#
+# 설치 (venv가 아닌 "분석 케이스 폴더 안 벤더링" 방식, Lab 원본과 동일):
+#   python -m pip install --target <case>\analysis_tools -r rea/requirements-rea.txt
+# 스크립트에서 사용:
+#   sys.path.insert(0, str(CASE_ROOT / "analysis_tools"))
+#   CLI 유닛은 <case>\analysis_tools\bin (Windows) 에 생성됨 — PATH 앞에 추가
+#
+# 검증: 2026-11-05, Python 3.13, Linux 샌드박스에서 설치 후
+#   a3x / xtnsis / lznt1 / rc4 / carve-pe / dnstr / pemeta 유닛 존재,
+#   rc4·lznt1 왕복 변환, capstone x64 역어셈블 정상 확인.
+#
+# 참고: 2026-10 Lab 사례에는 binary_refinery 0.3.36(dist-info)이 설치돼 있었고,
+#       a3x 등 최신 유닛을 쓰려고 git 소스(refinery_source)를 sys.path 맨 앞에 두었다.
+#       아래처럼 최신 릴리스로 고정하면 소스 클론 없이 같은 유닛을 쓸 수 있다.
+
+binary-refinery==0.11.3   # 파이프라인형 트리아지: xtnsis(NSIS), a3x(AutoIt EA06), rc4, lznt1, carve-pe, dnstr ...
+pefile==2024.8.26         # PE 헤더·섹션·Import/Export·Load Config(CFG) 파서
+capstone==5.0.9           # x86/x64 역어셈블러
+dnfile==0.18.0            # .NET 메타데이터 테이블·UserString·리소스 파서
+dncil==1.0.2              # CIL(IL) 메서드 본문 디코더
+pycryptodomex==3.24.1     # ARC4 등 복호화 프리미티브 (Cryptodome 네임스페이스)
+
+# 선택: 관리자 아티팩트 파싱(SRUM·Amcache) 시 별도 폴더에 설치
+#   python -m pip install --target <case>\admin_collect\pylib dissect.esedb regipy
